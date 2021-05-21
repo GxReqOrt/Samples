@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Community": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files (x86)\\GeneXus\\GeneXus17\\GeneXus.exe"
+    }
+  }
+}

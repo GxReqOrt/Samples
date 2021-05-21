@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package xmlns="http://schemas.genexus.com/addin/v1.0" id="efd9a280-6fea-4139-afb5-5da16e757bcf" name="ToolWindow">
+
+	<!--
+	Resources may contain images and strings.
+	Commands are translated using strings in the resources when
+	there is a resource string with the same name as a command id
+	-->
+	<Resources>
+		<Resource type="strings" name="Acme.Packages.ToolWindow.Resources"/>
+	</Resources>
+
+	<ToolWindows>
+		<ToolWindow id='3C3DEAE0-66DD-48bd-866D-463C4075385A' title='toolWindowTitle' location='right'/>
+	</ToolWindows>
+
+</Package>

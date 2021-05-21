@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Projects>
+	<Project Name="GXTasks" Location=".">
+
+		<File Name="Artech.Samples.GXTasks.dll"  />
+		<File Name="Artech.Samples.GXTasks.targets"  />
+		<File Name="GXTasksDemo.msbuild" />
+
+	</Project>
+</Projects>

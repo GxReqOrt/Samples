@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net471</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Artech.Architecture.Common, Version=10.0.0.4536, Culture=neutral, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Architecture.Common.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Architecture.UI.Framework, Version=10.0.0.4536, Culture=neutral, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Architecture.UI.Framework.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Common, Version=10.0.0.4536, Culture=neutral, PublicKeyToken=6f5bf81c27b6b8aa, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Common.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Common.Framework, Version=10.0.0.4536, Culture=neutral, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Common.Framework.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Common.Helpers, Version=10.0.0.4536, Culture=neutral, PublicKeyToken=6f5bf81c27b6b8aa, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Common.Helpers.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Common.Properties, Version=10.0.0.4536, Culture=neutral, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Common.Properties.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Genexus.Common, Version=10.0.0.4536, Culture=neutral, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Genexus.Common.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Artech.Udm.Framework, Version=10.0.0.4536, Culture=neutral, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>$(GX_SDK_DIR)\Bin\Artech.Udm.Framework.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="System.Windows.Forms" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="$(GX_SDK_DIR)\Src\CommonPackageInfo.cs">
+			<Link>Properties\CommonPackageInfo.cs</Link>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Remove="Community.package" />
+		<EmbeddedResource Include="Community.package" />
+	</ItemGroup>
+
+	<Target Name="CopyToGX" AfterTargets="AfterBuild">
+		<Message Text="Copying build output to GX" Importance="high" />
+		<ItemGroup>
+			<CopyToGxFile Include="$(OutDir)*.*" />
+		</ItemGroup>
+		<Copy DestinationFolder="$(GX_PROGRAM_DIR)\Packages" SourceFiles="@(CopyToGxFile)" SkipUnchangedFiles="True" />
+		<Exec Command="&quot;$(GX_PROGRAM_DIR)\Genexus&quot; /Install" />
+	</Target>
+</Project>

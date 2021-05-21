@@ -1,0 +1,17 @@
+﻿<Project DefaultTargets="Demo" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<Import Project="$(MSBuildProjectDirectory)\Genexus.Tasks.targets" />
+	<Import Project="$(MSBuildProjectDirectory)\Artech.Samples.GXTasks.targets" />
+
+	<PropertyGroup>
+		<KBPath Condition=" '$(KBPath)' == '' ">C:\MyKnowledgeBases\test</KBPath>
+	</PropertyGroup>
+
+	<Target  Name="Demo">
+		<OpenKnowledgeBase Directory="$(KBPath)"/>
+		<KnowledgeBaseInfo/>
+		<CloseKnowledgeBase />
+	</Target>
+
+</Project>
+

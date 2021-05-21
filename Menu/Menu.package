@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package xmlns="http://schemas.genexus.com/addin/v1.0" id="163faefb-1d07-4a23-acca-5f287020bcac" name="Menu">
+
+	<!--
+	Resources may contain images and strings.
+	Commands are translated using strings in the resources when
+	there is a resource string with the same name as a command id
+	-->
+	<Resources>
+		<Resource type="strings" name="Acme.Packages.Menu.Resources"/>
+		<Resource type="images" name="Acme.Packages.Menu.Resources"/>
+	</Resources>
+
+	<!-- These are locally defined commands -->
+	<Commands>
+		<CommandDefinition id="MyFirstCommand"/>
+
+		<!-- a command may specify an image -->
+		<CommandDefinition id="MySecondCommand" image="MenuImages" imageIndex="2"/>
+
+		<!-- it may also specify a shortcut indicator -->
+		<CommandDefinition id="YetAnotherCommand" shortcut="CtrlH" />
+
+		<CommandDefinition id="WhyNotAnotherCommand" />
+	</Commands>
+
+	<!-- You can group commands and then reference them by the group id-->
+	<Groups>
+		<Group id="MyGroup">
+			<Command refid="MyFirstCommand"/>
+			<Command refid="MySecondCommand"/>
+		</Group>
+	</Groups>
+	
+	<Menus>
+		<Menu type="menubar">
+			<Popup name="Commands" insertBefore="Window" >
+				<!-- You can reference groups -->
+				<Group refid="MyGroup" />
+
+				<!-- You can reference simple commands -->
+				<Command refid="YetAnotherCommand"/>
+				<Command refid="WhyNotAnotherCommand"/>
+				
+				<!--
+				You can even reference commands (or groups)
+				defined elsewhere, provided you know the
+				GUID of its package
+				-->
+				<Command refid="Import" package="4703F0A9-2AEB-4469-9466-25E2A56C7B6D"/>
+			</Popup>
+		</Menu>
+		
+		<Menu id='MyToolbar' type="toolbar" name="MyToolbar" row="3" column="1">
+			<!-- You can reference groups -->
+			<Group refid="MyGroup" />
+
+			<!-- You can reference simple commands -->
+			<Command refid="YetAnotherCommand"/>
+			<Command refid="WhyNotAnotherCommand"/>
+
+			<!--
+				You can even reference commands (or groups)
+				defined elsewhere, provided you know the
+				GUID of its package
+				-->
+			<Command refid="Import" package="4703F0A9-2AEB-4469-9466-25E2A56C7B6D"/>
+		</Menu>
+		
+	</Menus>
+</Package>

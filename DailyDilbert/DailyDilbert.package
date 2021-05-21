@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Package xmlns='http://schemas.genexus.com/addin/v1.0'
+			id='db2834f8-22e1-4258-b56b-e2377002b3ef'
+			name='DailyDilbert'>
+
+	<Resources>
+		<Resource type="strings" name="Artech.Samples.DailyDilbert.Resources"/>
+	</Resources>
+
+	<ToolWindows>
+		<ToolWindow id='B94EB5F4-F7E5-45d2-B5F7-78AAC50630FE' title='toolWindowTitle' location='bottom'/>
+	</ToolWindows>
+</Package>
