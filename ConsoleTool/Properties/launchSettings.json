@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleTool": {
+      "commandName": "Project",
+      "commandLineArgs": "/kb:C:\\Models\\TestKB"
+    }
+  }
+}

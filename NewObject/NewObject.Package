@@ -2,6 +2,10 @@
 <Package xmlns="http://schemas.genexus.com/addin/v1.0"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			id="a24bc960-4cdb-42f6-bfa9-84ad8eb85221"
-			name="Menu"
+			name="NewObject"
 			>
+	<Resources>
+		<Resource type="strings" name="Acme.Packages.NewObject.Resources"/>
+		<Resource type="images" name="Acme.Packages.NewObject.Resources"/>
+	</Resources>
 </Package>

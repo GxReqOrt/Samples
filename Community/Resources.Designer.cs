@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ArmandoCardoso.Packages.Community {
+namespace Community {
     using System;
     
     
@@ -19,10 +19,10 @@ namespace ArmandoCardoso.Packages.Community {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace ArmandoCardoso.Packages.Community {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArmandoCardoso.Packages.Community.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Community.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace ArmandoCardoso.Packages.Community {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized string similar to Community Wiki.
         /// </summary>
-        internal static string CKCommunityWikiCommand {
+        public static string CKCommunityWikiCommand {
             get {
                 return ResourceManager.GetString("CKCommunityWikiCommand", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized string similar to GeneXus Forums.
         /// </summary>
-        internal static string CKForumsCommand {
+        public static string CKForumsCommand {
             get {
                 return ResourceManager.GetString("CKForumsCommand", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized string similar to GXopen.
         /// </summary>
-        internal static string CKGXopenCommandd {
+        public static string CKGXopenCommandd {
             get {
                 return ResourceManager.GetString("CKGXopenCommandd", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized string similar to GXsearch.
         /// </summary>
-        internal static string CKGXsearchCommand {
+        public static string CKGXsearchCommand {
             get {
                 return ResourceManager.GetString("CKGXsearchCommand", resourceCulture);
             }
@@ -99,16 +99,25 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized string similar to Community.
         /// </summary>
-        internal static string Community {
+        public static string Community {
             get {
                 return ResourceManager.GetString("Community", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contoso.
+        /// </summary>
+        public static string ContosoCommand {
+            get {
+                return ResourceManager.GetString("ContosoCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon document {
+        public static System.Drawing.Icon document {
             get {
                 object obj = ResourceManager.GetObject("document", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -118,7 +127,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Folder {
+        public static System.Drawing.Icon Folder {
             get {
                 object obj = ResourceManager.GetObject("Folder", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -128,7 +137,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MenuImages {
+        public static System.Drawing.Bitmap MenuImages {
             get {
                 object obj = ResourceManager.GetObject("MenuImages", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -138,7 +147,7 @@ namespace ArmandoCardoso.Packages.Community {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Object {
+        public static System.Drawing.Icon Object {
             get {
                 object obj = ResourceManager.GetObject("Object", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
