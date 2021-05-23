@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Acme.Packages.Menu {
+namespace Menu {
     using System;
     
     
@@ -19,10 +19,10 @@ namespace Acme.Packages.Menu {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace Acme.Packages.Menu {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Acme.Packages.Menu.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Menu.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Acme.Packages.Menu {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon document {
+        public static System.Drawing.Icon document {
             get {
                 object obj = ResourceManager.GetObject("document", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -73,7 +73,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Folder {
+        public static System.Drawing.Icon Folder {
             get {
                 object obj = ResourceManager.GetObject("Folder", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -83,7 +83,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MenuImages {
+        public static System.Drawing.Bitmap MenuImages {
             get {
                 object obj = ResourceManager.GetObject("MenuImages", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized string similar to My Commands.
         /// </summary>
-        internal static string MyCommands {
+        public static string MyCommands {
             get {
                 return ResourceManager.GetString("MyCommands", resourceCulture);
             }
@@ -102,7 +102,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized string similar to My &amp;First Command.
         /// </summary>
-        internal static string MyFirstCommand {
+        public static string MyFirstCommand {
             get {
                 return ResourceManager.GetString("MyFirstCommand", resourceCulture);
             }
@@ -111,7 +111,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized string similar to My &amp;Second Command.
         /// </summary>
-        internal static string MySecondCommand {
+        public static string MySecondCommand {
             get {
                 return ResourceManager.GetString("MySecondCommand", resourceCulture);
             }
@@ -120,7 +120,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Object {
+        public static System.Drawing.Icon Object {
             get {
                 object obj = ResourceManager.GetObject("Object", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -130,7 +130,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Why not Another Command?.
         /// </summary>
-        internal static string WhyNotAnotherCommand {
+        public static string WhyNotAnotherCommand {
             get {
                 return ResourceManager.GetString("WhyNotAnotherCommand", resourceCulture);
             }
@@ -139,7 +139,7 @@ namespace Acme.Packages.Menu {
         /// <summary>
         ///   Looks up a localized string similar to &amp;Yet Another Command.
         /// </summary>
-        internal static string YetAnotherCommand {
+        public static string YetAnotherCommand {
             get {
                 return ResourceManager.GetString("YetAnotherCommand", resourceCulture);
             }
