@@ -6,6 +6,7 @@ using Artech.Architecture.UI.Framework.Packages;
 using Artech.Architecture.UI.Framework.Controls;
 using Artech.Packages.Definition;
 
+[assembly: PackageAttribute(typeof(Acme.Packages.ToolWindow.ToolWindowPackage))]
 namespace Acme.Packages.ToolWindow
 {
 	[Guid("efd9a280-6fea-4139-afb5-5da16e757bcf")]
