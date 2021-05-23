@@ -5,7 +5,12 @@ using Artech.Architecture.Common.Descriptors;
 using Artech.Architecture.UI.Framework.Packages;
 using System;
 using System.Runtime.InteropServices;
+using Acme.Packages.RTFText;
+using RTFText;
 
+[assembly: PackageAttribute(typeof(Package))]
+[assembly: KBObjectsDeclarationAttribute(typeof(Acme.Packages.RTFText.RTFText))]
+[assembly: KBObjectPartsDeclarationAttribute(typeof(TextPart))]
 namespace Acme.Packages.RTFText
 {
 	[Guid("ff1bf963-850a-4d9f-8dc4-80cf32a98487")]
