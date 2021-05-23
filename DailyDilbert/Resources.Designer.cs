@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Artech.Samples.DailyDilbert {
+namespace DailyDilbert {
     using System;
     
     
@@ -19,10 +19,10 @@ namespace Artech.Samples.DailyDilbert {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace Artech.Samples.DailyDilbert {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Artech.Samples.DailyDilbert.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DailyDilbert.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Artech.Samples.DailyDilbert {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Artech.Samples.DailyDilbert {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Dilbert {
+        public static System.Drawing.Icon Dilbert {
             get {
                 object obj = ResourceManager.GetObject("Dilbert", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -89,7 +89,7 @@ namespace Artech.Samples.DailyDilbert {
         ///	&lt;/body&gt;
         ///&lt;/html&gt;.
         /// </summary>
-        internal static string FailPage {
+        public static string FailPage {
             get {
                 return ResourceManager.GetString("FailPage", resourceCulture);
             }
@@ -98,7 +98,7 @@ namespace Artech.Samples.DailyDilbert {
         /// <summary>
         ///   Looks up a localized string similar to Daily Dilbert.
         /// </summary>
-        internal static string toolWindowTitle {
+        public static string toolWindowTitle {
             get {
                 return ResourceManager.GetString("toolWindowTitle", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Artech.Samples.DailyDilbert {
         ///	&lt;/xsl:template&gt;
         ///&lt;/xsl:stylesheet&gt;.
         /// </summary>
-        internal static string Transform {
+        public static string Transform {
             get {
                 return ResourceManager.GetString("Transform", resourceCulture);
             }

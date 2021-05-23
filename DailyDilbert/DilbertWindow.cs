@@ -10,6 +10,7 @@ using System.Xml.Xsl;
 using System.Xml;
 using System.Globalization;
 using System.Drawing;
+using DailyDilbert;
 
 namespace Artech.Samples.DailyDilbert
 {

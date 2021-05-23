@@ -4,6 +4,7 @@ using System.Globalization;
 
 using Artech.Architecture.Common.Services;
 using Artech.MsBuild.Common;
+using GXTasks;
 
 namespace Artech.Samples.GXTasks
 {
