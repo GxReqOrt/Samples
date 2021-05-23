@@ -5,7 +5,12 @@ using Artech.Architecture.Common.Descriptors;
 using Artech.Architecture.UI.Framework.Packages;
 using System;
 using System.Runtime.InteropServices;
+using Acme.Packages.Widgets;
+using Widgets;
 
+[assembly: PackageAttribute(typeof(Package))]
+[assembly: KBObjectsDeclarationAttribute(typeof(Widgetry))]
+[assembly: KBObjectPartsDeclarationAttribute(typeof(WidgetsPart))]
 namespace Acme.Packages.Widgets
 {
 	[Guid("7dfe339e-5e65-4a83-ad59-611b707657bc")]
