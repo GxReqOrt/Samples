@@ -4,6 +4,13 @@ using System.Windows.Forms;
 using Artech.Architecture.UI.Framework.Services;
 using Artech.Architecture.Common.Services;
 using Community;
+using System.Collections.Generic;
+using Artech.Genexus.Common.Services;
+using Artech.Architecture.Common.Objects;
+using Artech.Genexus.Common.Objects;
+using Artech.Architecture.BL.Framework.Services;
+using Artech.Common.Properties;
+using Artech.Udm.Framework;
 
 namespace ArmandoCardoso.Packages.Community
 {
@@ -74,13 +81,10 @@ namespace ArmandoCardoso.Packages.Community
 
         public bool ExecForumsCommand(CommandData commandData)
         {
-            // Do something in response to the command invocation
-            UIServices.StartPage.OpenPage("www.gxopen.com/forumsr/servlet/hsrmain", "GeneXus Forums");
-            UIServices.ToolWindows.FocusToolWindow(UIServices.StartPage.ToolWindow.Id);
-        
-            // return true to indicate you already handled the command;
-            // otherwise the framework will try with its next registered
-            // command target
+            IKBObjectService service = new SDTService();
+
+            var sdt = service.BuildEmpty("sdt_Countries");
+
             return true;
         }
 
@@ -103,11 +107,20 @@ namespace ArmandoCardoso.Packages.Community
 
         public bool ExecContosoCommand(CommandData commandData)
         {
-            IOutputService output = CommonServices.Output;
-            output.Clear();
-            output.StartSection("My section");
-            output.AddLine(Resources.ContosoCommand);
-            output.EndSection("My section", true);
+            IKBObjectService service = new TransactionService();
+
+            var transaction = service.BuildEmpty("User");
+
+            //GenexusUIServices.Build.Build(transaction.Key);
+            //var preferences = new KBObjectSavePreferences()
+            //{
+            //    ForceSave = true,
+            //    SkipChecksum = true,
+            //    SkipValidation = true,
+
+            //};
+
+            service.Save(transaction);
 
             return true;
 
