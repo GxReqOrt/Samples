@@ -18,11 +18,11 @@
 
 		<CommandDefinition id="GXOpen"/>
 
-		<CommandDefinition id="GeneXus Forums"/>
+		<CommandDefinition id="Create Data Provider"/>
 
-		<CommandDefinition id="All Community Resources"/>
+		<CommandDefinition id="Create SDT"/>
 
-		<CommandDefinition id="Contoso"/>
+		<CommandDefinition id="Create Transaction"/>
 	</Commands>
 
 	<!-- You can group commands and then reference them by the group id-->
@@ -31,11 +31,11 @@
 			<Command refid="GXSearch"/>
 			<Command refid="Community Wiki"/>
 			<Command refid="GXOpen"/>
-			<Command refid="GeneXus Forums"/>
-			<Command refid="Contoso"/>
+			<Command refid="Create Data Provider"/>
+			<Command refid="Create Transaction"/>
 		</Group>
 		<Group id="CommunityGroup2">
-			<Command refid="All Community Resources"/>
+			<Command refid="Create SDT"/>
 		</Group>
 	</Groups>
 

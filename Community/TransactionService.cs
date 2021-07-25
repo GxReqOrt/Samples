@@ -1,8 +1,11 @@
 ﻿using Artech.Architecture.Common.Objects;
 using Artech.Architecture.UI.Framework.Services;
+using Artech.Genexus.Common;
 using Artech.Genexus.Common.Objects;
 using Artech.Genexus.Common.Parts;
 using Artech.Udm.Framework;
+using System;
+
 namespace ArmandoCardoso.Packages.Community
 {
     public class TransactionService : IKBObjectService
@@ -14,12 +17,12 @@ namespace ArmandoCardoso.Packages.Community
             var kbService = UIServices.KB;
             KBModel model = kbService.WorkingEnvironment.DesignModel;
             var transaction = Transaction.Create(model);
-            //transaction.SetPropertyValue("Key", new EntityKey(transaction.Guid, transaction.Id));
+
             var structure = transaction.Structure.Root;
-            var attribute = new Attribute(model)
+            var attribute = new Artech.Genexus.Common.Objects.Attribute(model)
             {
                 Name = $"{name}Id",
-                Type = Artech.Genexus.Common.eDBType.CHARACTER,
+                Type = eDBType.CHARACTER,
                 Length = 30,
                 Decimals = 0,
 

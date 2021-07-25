@@ -1,16 +1,6 @@
 using Artech.Architecture.UI.Framework.Helper;
-using Artech.Common.Framework.Commands;
-using System.Windows.Forms;
 using Artech.Architecture.UI.Framework.Services;
-using Artech.Architecture.Common.Services;
-using Community;
-using System.Collections.Generic;
-using Artech.Genexus.Common.Services;
-using Artech.Architecture.Common.Objects;
-using Artech.Genexus.Common.Objects;
-using Artech.Architecture.BL.Framework.Services;
-using Artech.Common.Properties;
-using Artech.Udm.Framework;
+using Artech.Common.Framework.Commands;
 
 namespace ArmandoCardoso.Packages.Community
 {
@@ -28,13 +18,11 @@ namespace ArmandoCardoso.Packages.Community
             // Commands with exec handler and without a query handler are enabled by default
             AddCommand(CommandKeys.gxopencommand, new ExecHandler(ExecGXopenCommand));
 
-            // Commands with exec handler and without a query handler are enabled by default
-            AddCommand(CommandKeys.forumscommand, new ExecHandler(ExecForumsCommand));
+            AddCommand(CommandKeys.createdataprovidercommand, new ExecHandler(ExecCreateDataProviderCommand));
 
-            // Commands with exec handler and without a query handler are enabled by default
-            AddCommand(CommandKeys.allcommunityresourcescommand, new ExecHandler(ExecAllCommunityResourcesCommand));
+            AddCommand(CommandKeys.createsdtcommand, new ExecHandler(ExecCreateSDTCommand));
 
-            AddCommand(CommandKeys.contosocommand, new ExecHandler(ExecContosoCommand));
+            AddCommand(CommandKeys.createtransactioncommand, new ExecHandler(ExecCreateTransactionCommand));
         }
 
         // This is where you implement whatever you want to do
@@ -79,51 +67,37 @@ namespace ArmandoCardoso.Packages.Community
             return true;
         }
 
-        public bool ExecForumsCommand(CommandData commandData)
+        public bool ExecCreateSDTCommand(CommandData commandData)
         {
             IKBObjectService service = new SDTService();
 
             var sdt = service.BuildEmpty("sdt_Countries");
 
+            service.Save(sdt);
+
             return true;
         }
 
-        public bool ExecAllCommunityResourcesCommand(CommandData commandData)
+        public bool ExecCreateDataProviderCommand(CommandData commandData)
         {
-            // Do something in response to the command invocation
-            // UIServices.StartPage.OpenPage("www.gxtechnical.com/community", "Community Resources");
-            // UIServices.ToolWindows.FocusToolWindow(UIServices.StartPage.ToolWindow.Id);
-            IOutputService output = CommonServices.Output;
-            output.Clear();
-            output.StartSection("My section");
-            output.AddLine("Sending a message to output window");
-            output.EndSection("My section", true);
+            IKBObjectService service = new DataProviderService();
 
-            // return true to indicate you already handled the command;
-            // otherwise the framework will try with its next registered
-            // command target
+            var dataProvider = service.BuildEmpty("DPRV_Countries");
+
+            service.Save(dataProvider);
+
             return true;
         }
 
-        public bool ExecContosoCommand(CommandData commandData)
+        public bool ExecCreateTransactionCommand(CommandData commandData)
         {
             IKBObjectService service = new TransactionService();
 
             var transaction = service.BuildEmpty("User");
 
-            //GenexusUIServices.Build.Build(transaction.Key);
-            //var preferences = new KBObjectSavePreferences()
-            //{
-            //    ForceSave = true,
-            //    SkipChecksum = true,
-            //    SkipValidation = true,
-
-            //};
-
             service.Save(transaction);
 
             return true;
-
         }
     }
 }

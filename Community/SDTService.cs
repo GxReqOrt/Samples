@@ -16,28 +16,30 @@ namespace ArmandoCardoso.Packages.Community
         {
             IKBService kbserv = UIServices.KB;
             var kbmodel = kbserv.WorkingEnvironment.DesignModel;
-            SDT sdt = new SDT(kbmodel);
-            sdt.Name = name;
-            //sdt.Parent = Folder.GetRoot(kbmodel);
+
+            SDT sdt = new SDT(kbmodel)
+            {
+                Name = name
+            };
+
             SDTLevel nivelSup = sdt.SDTStructure.Root;
             nivelSup.IsCollection = true;
-            // SDT Items
-            SDTItem item1 = nivelSup.AddItem("CountryId", Artech.Genexus.Common.eDBType.NUMERIC, 4, 0);
-            SDTItem item2 = nivelSup.AddItem("CountryName", Artech.Genexus.Common.eDBType.VARCHAR, 30, 0);
-          
-            sdt.Save();
+
+            nivelSup.AddItem("CountryId", Artech.Genexus.Common.eDBType.NUMERIC, 4, 0);
+            nivelSup.AddItem("CountryName", Artech.Genexus.Common.eDBType.VARCHAR, 30, 0);
+         
 
             return sdt;
         }
 
         public void Save(KBObject obj)
         {
-            throw new NotImplementedException();
+            obj.Save();
         }
 
         public void Save(KBObject obj, KBObjectSavePreferences preferences)
         {
-            throw new NotImplementedException();
+            obj.Save(preferences);
         }
     }
 }
