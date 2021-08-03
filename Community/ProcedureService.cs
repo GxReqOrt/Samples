@@ -1,30 +1,23 @@
 ﻿using Artech.Architecture.Common.Objects;
 using Artech.Architecture.UI.Framework.Services;
 using Artech.Genexus.Common.Objects;
-using Artech.Genexus.Common.Parts.SDT;
+using System;
 
 namespace ArmandoCardoso.Packages.Community
 {
-    public class SDTService : IKBObjectService
+    public class ProcedureService : IKBObjectService
     {
         public KBObject BuildEmpty(string name)
         {
             IKBService kbserv = UIServices.KB;
-            var kbmodel = kbserv.WorkingEnvironment.DesignModel;
+            KBModel kbmodel = kbserv.WorkingEnvironment.DesignModel;
 
-            SDT sdt = new SDT(kbmodel)
+            Procedure procedure = new Procedure(kbmodel)
             {
                 Name = name
             };
 
-            SDTLevel nivelSup = sdt.SDTStructure.Root;
-            nivelSup.IsCollection = true;
-
-            nivelSup.AddItem("CountryId", Artech.Genexus.Common.eDBType.NUMERIC, 4, 0);
-            nivelSup.AddItem("CountryName", Artech.Genexus.Common.eDBType.VARCHAR, 30, 0);
-         
-
-            return sdt;
+            return procedure;
         }
 
         public void Save(KBObject obj)

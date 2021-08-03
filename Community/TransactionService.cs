@@ -3,8 +3,6 @@ using Artech.Architecture.UI.Framework.Services;
 using Artech.Genexus.Common;
 using Artech.Genexus.Common.Objects;
 using Artech.Genexus.Common.Parts;
-using Artech.Udm.Framework;
-using System;
 
 namespace ArmandoCardoso.Packages.Community
 {
@@ -14,26 +12,39 @@ namespace ArmandoCardoso.Packages.Community
       
         public KBObject BuildEmpty(string name)
         {
-            var kbService = UIServices.KB;
-            KBModel model = kbService.WorkingEnvironment.DesignModel;
-            var transaction = Transaction.Create(model);
+            KBModel model = UIServices.KB.CurrentModel;
 
-            var structure = transaction.Structure.Root;
-            var attribute = new Artech.Genexus.Common.Objects.Attribute(model)
+            string attName = $"{name}Id";
+
+            Attribute att = Attribute.Get(model, attName) ?? Attribute.Create(model);
+            if (att.Mode == Artech.Common.Mode.Inserted)
             {
-                Name = $"{name}Id",
-                Type = eDBType.CHARACTER,
-                Length = 30,
-                Decimals = 0,
+                att.Name = attName;
+                att.Type = eDBType.CHARACTER;
+                att.Length = 30;
+                att.Save();
+            }
 
-            };
-            structure.AddAttribute(new TransactionAttribute(new StructurePart(transaction), attribute) {
-                IsKey = true
-            });
+            string att2Name = $"{name}Name";
 
-            transaction.Name = name;
+            Attribute att2 = Attribute.Get(model, att2Name) ?? Attribute.Create(model);
+            if (att2.Mode == Artech.Common.Mode.Inserted)
+            {
+                att2.Name = att2Name;
+                att2.Type = eDBType.CHARACTER;
+                att2.Length = 30;
+                att2.Save();
+            }
 
-            return transaction;
+            Transaction trn = Transaction.Get(model, new QualifiedName(name)) ?? Transaction.Create(model);
+            if (trn.Mode == Artech.Common.Mode.Inserted)
+            {
+                trn.Name = name;
+                trn.Structure.Root.AddAttribute(new TransactionAttribute(trn.Structure, att) { IsKey = true });
+                trn.Structure.Root.AddAttribute(new TransactionAttribute(trn.Structure, att2) { IsKey = false });
+            }
+
+            return trn;
         }
 
         public void Save(KBObject obj)

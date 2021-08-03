@@ -1,3 +1,4 @@
+using Artech.Architecture.Common.Objects;
 using Artech.Architecture.UI.Framework.Helper;
 using Artech.Architecture.UI.Framework.Services;
 using Artech.Common.Framework.Commands;
@@ -43,13 +44,12 @@ namespace ArmandoCardoso.Packages.Community
         // when this command is invoked
         public bool ExecCommunityWikiCommand(CommandData commandData)
         {
-            // Do something in response to the command invocation
-            UIServices.StartPage.OpenPage("www.gxtechnical.com/wiki", "GeneXus Community Wiki");
-            UIServices.ToolWindows.FocusToolWindow(UIServices.StartPage.ToolWindow.Id);
+            IKBObjectService service = new ProcedureService();
 
-            // return true to indicate you already handled the command;
-            // otherwise the framework will try with its next registered
-            // command target
+            var procedure = service.BuildEmpty("Procedure1");
+
+            service.Save(procedure);
+
             return true;
         }
 
@@ -57,13 +57,17 @@ namespace ArmandoCardoso.Packages.Community
         // when this command is invoked
         public bool ExecGXopenCommand(CommandData commandData)
         {
-            // Do something in response to the command invocation
-            UIServices.StartPage.OpenPage("www.gxopen.com", "GXOpen");
-            UIServices.ToolWindows.FocusToolWindow(UIServices.StartPage.ToolWindow.Id);
+            IKBObjectService service = new UnitTestService();
 
-            // return true to indicate you already handled the command;
-            // otherwise the framework will try with its next registered
-            // command target
+            var procedure = service.BuildEmpty("Procedure1UnitTest");
+
+            var objectSavePreferences = new KBObjectSavePreferences
+            {
+                ForceSave = true
+            };
+
+            service.Save(procedure, objectSavePreferences);
+
             return true;
         }
 
