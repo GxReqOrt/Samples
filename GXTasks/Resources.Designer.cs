@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Artech.Samples.GXTasks {
+namespace GXTasks {
     using System;
     
     
@@ -19,10 +19,10 @@ namespace Artech.Samples.GXTasks {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace Artech.Samples.GXTasks {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Artech.Samples.GXTasks.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GXTasks.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Artech.Samples.GXTasks {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Artech.Samples.GXTasks {
         /// <summary>
         ///   Looks up a localized string similar to Not that we are doing too much work, but, oh well....
         /// </summary>
-        internal static string AdditionalAndImportantInfo {
+        public static string AdditionalAndImportantInfo {
             get {
                 return ResourceManager.GetString("AdditionalAndImportantInfo", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Artech.Samples.GXTasks {
         /// <summary>
         ///   Looks up a localized string similar to There is no available Knowledge Base.
         /// </summary>
-        internal static string NoKB {
+        public static string NoKB {
             get {
                 return ResourceManager.GetString("NoKB", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Artech.Samples.GXTasks {
         /// <summary>
         ///   Looks up a localized string similar to KnowledgeBaseInfo.
         /// </summary>
-        internal static string TaskName {
+        public static string TaskName {
             get {
                 return ResourceManager.GetString("TaskName", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Artech.Samples.GXTasks {
         /// <summary>
         ///   Looks up a localized string similar to {0} time: {1} seconds.
         /// </summary>
-        internal static string TaskTime {
+        public static string TaskTime {
             get {
                 return ResourceManager.GetString("TaskTime", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Artech.Samples.GXTasks {
         /// <summary>
         ///   Looks up a localized string similar to Working on Knowledge Base: &apos;{0}&apos; at &apos;{1}&apos;.
         /// </summary>
-        internal static string WorkingOnKnowledgeBase {
+        public static string WorkingOnKnowledgeBase {
             get {
                 return ResourceManager.GetString("WorkingOnKnowledgeBase", resourceCulture);
             }

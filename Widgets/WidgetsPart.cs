@@ -1,16 +1,13 @@
-using System;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
-
+using Artech.Architecture.Common.Descriptors;
+using Artech.Architecture.Common.Objects;
 using Artech.Common;
 using Artech.Common.Helpers.Generics;
-using Artech.Architecture.Common.Objects;
-using Artech.Architecture.UI.Framework.Objects;
-using Artech.Architecture.Common.Descriptors;
+using System;
+using System.Runtime.InteropServices;
 
 namespace Acme.Packages.Widgets
 {
-	[Guid("20dd82f3-ada4-4278-a992-6a2375cfe5b6")]
+    [Guid("20dd82f3-ada4-4278-a992-6a2375cfe5b6")]
 	[KBObjectPartDescriptor("Widgets", "Acme.Packages.Widgets.Resources, document")]
 	public class WidgetsPart : KBObjectPart
 	{

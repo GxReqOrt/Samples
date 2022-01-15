@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Widgets": {
+      "commandName": "Executable",
+      "executablePath": "$(GX_PROGRAM_DIR)\\GeneXus.exe"
+    }
+  }
+}

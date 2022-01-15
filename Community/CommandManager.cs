@@ -3,6 +3,7 @@ using Artech.Common.Framework.Commands;
 using System.Windows.Forms;
 using Artech.Architecture.UI.Framework.Services;
 using Artech.Architecture.Common.Services;
+using Community;
 
 namespace ArmandoCardoso.Packages.Community
 {
@@ -25,6 +26,8 @@ namespace ArmandoCardoso.Packages.Community
 
             // Commands with exec handler and without a query handler are enabled by default
             AddCommand(CommandKeys.allcommunityresourcescommand, new ExecHandler(ExecAllCommunityResourcesCommand));
+
+            AddCommand(CommandKeys.contosocommand, new ExecHandler(ExecContosoCommand));
         }
 
         // This is where you implement whatever you want to do
@@ -96,6 +99,18 @@ namespace ArmandoCardoso.Packages.Community
             // otherwise the framework will try with its next registered
             // command target
             return true;
+        }
+
+        public bool ExecContosoCommand(CommandData commandData)
+        {
+            IOutputService output = CommonServices.Output;
+            output.Clear();
+            output.StartSection("My section");
+            output.AddLine(Resources.ContosoCommand);
+            output.EndSection("My section", true);
+
+            return true;
+
         }
     }
 }

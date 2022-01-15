@@ -1,60 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Package xmlns='http://schemas.genexus.com/addin/v1.0' id='0471ba29-8a43-4927-8699-58ce02f4688a' name='Community'>
-  <!--
+	<!--
 	Resources may contain images and strings.
 	Commands are translated using strings in the resources when
 	there is a resource string with the same name as a command id
 	-->
-  <Resources>
-    <Resource type="strings" name="ArmandoCardoso.Packages.Community.Resources"/>
-    <Resource type="images" name="ArmandoCardoso.Packages.Community.Resources"/>
-  </Resources>
+	<Resources>
+		<Resource type="strings" name="ArmandoCardoso.Packages.Community.Resources"/>
+		<Resource type="images" name="ArmandoCardoso.Packages.Community.Resources"/>
+	</Resources>
 
-  <!-- These are locally defined commands -->
-  <Commands>
-    <CommandDefinition id="GXSearch"/>
+	<!-- These are locally defined commands -->
+	<Commands>
+		<CommandDefinition id="GXSearch"/>
 
-    <CommandDefinition id="Community Wiki"/>
-    
-    <CommandDefinition id="GXOpen"/>
+		<CommandDefinition id="Community Wiki"/>
 
-    <CommandDefinition id="GeneXus Forums"/>
+		<CommandDefinition id="GXOpen"/>
 
-    <CommandDefinition id="All Community Resources"/>
-  </Commands>
+		<CommandDefinition id="GeneXus Forums"/>
 
-  <!-- You can group commands and then reference them by the group id-->
-  <Groups>
-    <Group id="CommunityGroup1">
-      <Command refid="GXSearch"/>
-      <Command refid="Community Wiki"/>
-      <Command refid="GXOpen"/>
-      <Command refid="GeneXus Forums"/>
-    </Group>
-    <Group id="CommunityGroup2">
-      <Command refid="All Community Resources"/>
-    </Group>
-  </Groups>
+		<CommandDefinition id="All Community Resources"/>
 
-  <Menus>
-    <Menu type="menubar">
-      <Popup name="Community" insertBefore="Help" >
-        <!-- You can reference groups -->
-        <Group refid="CommunityGroup1" />
-        <Group refid="CommunityGroup2" />
-        <!-- You can reference simple commands -->
-        <!--<Command refid="GXsearch"/>-->
-        <!--<Command refid="Community Wiki"/>-->
-        <!--<Command refid="GXopen"/>-->
-        <!--<Command refid="Forums"/>-->
-        <!--<Command refid="All Community Resources"/>-->
-        <!--
+		<CommandDefinition id="Contoso"/>
+	</Commands>
+
+	<!-- You can group commands and then reference them by the group id-->
+	<Groups>
+		<Group id="CommunityGroup1">
+			<Command refid="GXSearch"/>
+			<Command refid="Community Wiki"/>
+			<Command refid="GXOpen"/>
+			<Command refid="GeneXus Forums"/>
+			<Command refid="Contoso"/>
+		</Group>
+		<Group id="CommunityGroup2">
+			<Command refid="All Community Resources"/>
+		</Group>
+	</Groups>
+
+	<Menus>
+		<Menu type="menubar">
+			<Popup name="Community" insertBefore="Help" >
+				<!-- You can reference groups -->
+				<Group refid="CommunityGroup1" />
+				<Group refid="CommunityGroup2" />
+				<!-- You can reference simple commands -->
+				<!--<Command refid="GXsearch"/>-->
+				<!--<Command refid="Community Wiki"/>-->
+				<!--<Command refid="GXopen"/>-->
+				<!--<Command refid="Forums"/>-->
+				<!--<Command refid="All Community Resources"/>-->
+				<!--
 				You can even reference commands (or groups)
 				defined elsewhere, provided you know the
 				GUID of its package
 				-->
-        <Command refid="Consolidate" package="4703F0A9-2AEB-4469-9466-25E2A56C7B6D"/>
-      </Popup>
-    </Menu>
-  </Menus>
+				<Command refid="Consolidate" package="4703F0A9-2AEB-4469-9466-25E2A56C7B6D"/>
+			</Popup>
+		</Menu>
+	</Menus>
 </Package>

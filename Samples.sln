@@ -1,16 +1,15 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{B7F25C01-92F5-4633-9EFF-2C612A946A71}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewObject", "NewObject\NewObject.csproj", "{B7AAC4A5-5792-4948-B739-4AA2412F0BD7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolWindow", "ToolWindow\ToolWindow.csproj", "{A5E3F4B6-4A22-4FCB-BCED-3876DFA91E3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyDilbert", "DailyDilbert\DailyDilbert.csproj", "{8A7EF5AF-4961-433F-B99B-DD466228633D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community", "Community\Community.csproj", "{89E6E1D2-EC14-4D40-BD89-00CB6ACE54EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Community", "Community\Community.csproj", "{89E6E1D2-EC14-4D40-BD89-00CB6ACE54EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTFText", "RTFText\RTFText.csproj", "{180CB008-BB46-401D-A8F4-A31CD386538E}"
 EndProject
@@ -18,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widgets", "Widgets\Widgets.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GXTasks", "GXTasks\GXTasks.csproj", "{24F247C7-542E-496B-AAFF-2D7AF8B54CA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTool", "ConsoleTool\ConsoleTool.csproj", "{76BC52C6-4710-4FB7-82ED-D08FBAC78C58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTool", "ConsoleTool\ConsoleTool.csproj", "{76BC52C6-4710-4FB7-82ED-D08FBAC78C58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewObject", "NewObject\NewObject.csproj", "{B4EBAB11-6EB1-4D4D-BD10-961A4434C40A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +31,6 @@ Global
 		{B7F25C01-92F5-4633-9EFF-2C612A946A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7F25C01-92F5-4633-9EFF-2C612A946A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7F25C01-92F5-4633-9EFF-2C612A946A71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7AAC4A5-5792-4948-B739-4AA2412F0BD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7AAC4A5-5792-4948-B739-4AA2412F0BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7AAC4A5-5792-4948-B739-4AA2412F0BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7AAC4A5-5792-4948-B739-4AA2412F0BD7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5E3F4B6-4A22-4FCB-BCED-3876DFA91E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5E3F4B6-4A22-4FCB-BCED-3876DFA91E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5E3F4B6-4A22-4FCB-BCED-3876DFA91E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,8 +59,15 @@ Global
 		{76BC52C6-4710-4FB7-82ED-D08FBAC78C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76BC52C6-4710-4FB7-82ED-D08FBAC78C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76BC52C6-4710-4FB7-82ED-D08FBAC78C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4EBAB11-6EB1-4D4D-BD10-961A4434C40A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EBAB11-6EB1-4D4D-BD10-961A4434C40A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EBAB11-6EB1-4D4D-BD10-961A4434C40A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EBAB11-6EB1-4D4D-BD10-961A4434C40A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C3A698C-7CE6-4CD3-B40D-708F7B7F8295}
 	EndGlobalSection
 EndGlobal

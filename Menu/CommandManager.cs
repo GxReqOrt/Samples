@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Acme.Packages.Menu
 {
-	class CommandManager : CommandDelegator
+    class CommandManager : CommandDelegator
 	{
 		// We handle only two commands here, just for illustration purposes
 		public CommandManager()

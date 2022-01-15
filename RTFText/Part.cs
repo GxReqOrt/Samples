@@ -1,14 +1,11 @@
+using Artech.Architecture.Common.Descriptors;
+using Artech.Architecture.Common.Objects;
 using System;
 using System.Runtime.InteropServices;
 
-using Artech.Common;
-using Artech.Architecture.Common.Objects;
-using Artech.Architecture.UI.Framework.Objects;
-using Artech.Architecture.Common.Descriptors;
-
 namespace Acme.Packages.RTFText
 {
-	[Guid("bbeca468-8802-4d79-b252-148ce367ba7b")]
+    [Guid("bbeca468-8802-4d79-b252-148ce367ba7b")]
 	[KBObjectPartDescriptor("Text", "Acme.Packages.RTFText.Resources, document")]
 	public class TextPart : KBObjectPart
 	{

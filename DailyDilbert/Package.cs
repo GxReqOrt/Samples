@@ -1,12 +1,13 @@
 using Artech.Architecture.Common.Packages;
 using Artech.Architecture.Common.Services;
-using System.Runtime.InteropServices;
 using Artech.Architecture.UI.Framework.Controls;
 using Artech.Architecture.UI.Framework.Packages;
+using System.Runtime.InteropServices;
 
+[assembly: Package(typeof(Artech.Samples.DailyDilbert.Package))]
 namespace Artech.Samples.DailyDilbert
 {
-	[Guid("db2834f8-22e1-4258-b56b-e2377002b3ef")]
+    [Guid("db2834f8-22e1-4258-b56b-e2377002b3ef")]
 	public class Package : AbstractPackageUI	{
 		public override string Name
 		{

@@ -58,6 +58,21 @@
 		<EmbeddedResource Include="Community.package" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Resources.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
 	<Target Name="CopyToGX" AfterTargets="AfterBuild">
 		<Message Text="Copying build output to GX" Importance="high" />
 		<ItemGroup>

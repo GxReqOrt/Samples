@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Package xmlns="http://schemas.genexus.com/addin/v1.0" id="163faefb-1d07-4a23-acca-5f287020bcac" name="Menu">
+<Package xmlns="http://schemas.genexus.com/addin/v1.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 id="163faefb-1d07-4a23-acca-5f287020bcac" 
+		 name="Menu">
 
 	<!--
 	Resources may contain images and strings.
