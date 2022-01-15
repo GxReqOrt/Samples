@@ -2,7 +2,7 @@
   "profiles": {
     "GXTasks": {
       "commandName": "Executable",
-      "executablePath": "C:\\Program Files (x86)\\GeneXus\\GeneXus17\\GeneXus.exe"
+      "executablePath": "$(GX_PROGRAM_DIR)\\GeneXus.exe"
     }
   }
 }

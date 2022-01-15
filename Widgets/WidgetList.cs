@@ -1,10 +1,8 @@
-using System;
 using System.ComponentModel;
-using Artech.Common.Helpers.Events;
 
 namespace Acme.Packages.Widgets
 {
-	public class WidgetList : BindingList<Widget>
+    public class WidgetList : BindingList<Widget>
 	{
 		public WidgetList()
 		{

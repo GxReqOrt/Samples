@@ -1,15 +1,15 @@
+using Acme.Packages.Menu;
+using Artech.Architecture.Common.Descriptors;
 using Artech.Architecture.Common.Packages;
 using Artech.Architecture.Common.Services;
 using Artech.Architecture.UI.Framework.Packages;
+using Menu;
 using System;
 using System.Runtime.InteropServices;
-using Artech.Architecture.Common.Descriptors;
-using Menu;
-using Acme.Packages.Menu;
 
-[assembly: PackageAttribute(typeof(Acme.Packages.Menu.MenuPackage))]
-[assembly: KBObjectsDeclarationAttribute(typeof(MyType))]
-[assembly: KBObjectPartsDeclarationAttribute(typeof(MyDataPart))]
+[assembly: Package(typeof(MenuPackage))]
+[assembly: KBObjectsDeclaration(typeof(MyType))]
+[assembly: KBObjectPartsDeclaration(typeof(MyDataPart))]
 namespace Acme.Packages.Menu
 {
     [Guid("163faefb-1d07-4a23-acca-5f287020bcac")]

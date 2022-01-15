@@ -1,14 +1,13 @@
+using Artech.Architecture.Common.Services;
+using Artech.MsBuild.Common;
+using GXTasks;
 using System;
 using System.Diagnostics;
 using System.Globalization;
 
-using Artech.Architecture.Common.Services;
-using Artech.MsBuild.Common;
-using GXTasks;
-
 namespace Artech.Samples.GXTasks
 {
-	public class KnowledgeBaseInfo : ArtechTask
+    public class KnowledgeBaseInfo : ArtechTask
 	{
 		public override bool Execute()
 		{

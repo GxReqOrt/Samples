@@ -1,19 +1,18 @@
+using Acme.Packages.RTFText;
+using Artech.Architecture.Common.Descriptors;
 using Artech.Architecture.Common.Packages;
 using Artech.Architecture.Common.Services;
-using Artech.Architecture.UI.Framework.Objects;
-using Artech.Architecture.Common.Descriptors;
 using Artech.Architecture.UI.Framework.Packages;
+using RTFText;
 using System;
 using System.Runtime.InteropServices;
-using Acme.Packages.RTFText;
-using RTFText;
 
-[assembly: PackageAttribute(typeof(Package))]
-[assembly: KBObjectsDeclarationAttribute(typeof(Acme.Packages.RTFText.RTFText))]
-[assembly: KBObjectPartsDeclarationAttribute(typeof(TextPart))]
+[assembly: Package(typeof(Package))]
+[assembly: KBObjectsDeclaration(typeof(Acme.Packages.RTFText.RTFText))]
+[assembly: KBObjectPartsDeclaration(typeof(TextPart))]
 namespace Acme.Packages.RTFText
 {
-	[Guid("ff1bf963-850a-4d9f-8dc4-80cf32a98487")]
+    [Guid("ff1bf963-850a-4d9f-8dc4-80cf32a98487")]
 	public class Package : AbstractPackageUI
 	{
 		public override string Name

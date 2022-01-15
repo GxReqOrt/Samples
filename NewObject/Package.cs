@@ -1,19 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-using System.Xml.XPath;
 using Acme.Packages.NewObject;
 using Artech.Architecture.Common.Descriptors;
 using Artech.Architecture.Common.Objects;
 using Artech.Architecture.Common.Packages;
 using Artech.Architecture.Common.Services;
-using Artech.Architecture.UI.Framework.Objects;
 using Artech.Architecture.UI.Framework.Packages;
 using Artech.Common.Diagnostics;
 using NewObject;
+using System;
+using System.Runtime.InteropServices;
+using System.Xml.XPath;
 
-[assembly: PackageAttribute(typeof(Acme.Packages.NewObject.Package))]
-[assembly: KBObjectsDeclarationAttribute(typeof(NewObjectType))]
-[assembly: KBObjectPartsDeclarationAttribute(typeof(NewPartTypePart))]
+[assembly: Package(typeof(Package))]
+[assembly: KBObjectsDeclaration(typeof(NewObjectType))]
+[assembly: KBObjectPartsDeclaration(typeof(NewPartTypePart))]
 namespace Acme.Packages.NewObject
 {
     [Guid("a24bc960-4cdb-42f6-bfa9-84ad8eb85221")]

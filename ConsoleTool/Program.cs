@@ -1,14 +1,14 @@
-using System;
-using System.IO;
 using Artech.Architecture.Common.Objects;
+using Artech.Common.Exceptions;
 using Artech.Common.Helpers.Assemblies;
 using Artech.Common.Helpers.IO;
-using Artech.Common.Exceptions;
 using Artech.Genexus.Common.Objects;
+using System;
+using System.IO;
 
 namespace GXextensions.ConsoleTool
 {
-	class Program
+    class Program
 	{
 		static CommandParser cmdParser = new CommandParser();
 

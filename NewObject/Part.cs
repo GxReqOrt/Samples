@@ -1,15 +1,13 @@
+using Artech.Architecture.Common.Descriptors;
+using Artech.Architecture.Common.Objects;
+using Artech.Common;
+using Artech.Common.Helpers.Kmw;
 using System;
 using System.Runtime.InteropServices;
 
-using Artech.Architecture.Common.Objects;
-using Artech.Architecture.Common.Descriptors;
-using Artech.Architecture.UI.Framework.Objects;
-using Artech.Common;
-using Artech.Common.Helpers.Kmw;
-
 namespace Acme.Packages.NewObject
 {
-	[Guid("8c65640e-46d7-4c1d-ad27-56fe81f23485")]
+    [Guid("8c65640e-46d7-4c1d-ad27-56fe81f23485")]
 	[KBObjectPartDescriptor("New Part Type", "Acme.Packages.NewObject.Resources, document")]
 	public class NewPartTypePart : KBObjectPart
 	{
