@@ -112,9 +112,13 @@ namespace MyExtension.BL
                 var myPart = part as MyObjectTypePart;
                 var partText = partData.SelectSingleNode("Text");
                 if (partText != null)
+                {
                     myPart.Source = partText.InnerXml;
+                }
                 else
-                    myPart.Source = "";
+                {
+                    myPart.Source = string.Empty;
+                }
             }
         }
     }
